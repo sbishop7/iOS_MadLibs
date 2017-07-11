@@ -9,7 +9,11 @@
 import UIKit
 
 class LandingViewController: UIViewController {
+    @IBAction func AddWordsButtonPressed(_ sender: UIBarButtonItem) {
+    }
 
+    @IBOutlet weak var storyLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

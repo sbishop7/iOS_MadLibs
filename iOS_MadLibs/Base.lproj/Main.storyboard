@@ -39,9 +39,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8rf-zd-Nr0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="G26-9r-sBA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="G26-9r-sBA">
+                            <connections>
+                                <action selector="AddWordsButtonPressed:" destination="BYZ-38-t0r" id="nu9-4o-Jyb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="storyLabel" destination="0o2-yF-Ewb" id="3z3-cD-dRw"/>
                         <segue destination="yhy-U7-TZP" kind="presentation" identifier="AddWordsSegue" id="NUX-BO-rYo"/>
                     </connections>
                 </viewController>
@@ -94,6 +99,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="SubmitButtonPressed:" destination="yhy-U7-TZP" eventType="touchUpInside" id="mMq-N8-Oeq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,6 +124,12 @@
                             <constraint firstItem="1sW-0Z-nVU" firstAttribute="leading" secondItem="r2L-Hx-KIM" secondAttribute="leadingMargin" id="yB9-xL-Bf1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AdjectiveTextField" destination="iMi-VO-2qN" id="4kv-dM-K1N"/>
+                        <outlet property="NounTextField" destination="1sW-0Z-nVU" id="22J-Ni-oMU"/>
+                        <outlet property="Verb1TextField" destination="fBf-r2-SFq" id="p3T-DD-CIq"/>
+                        <outlet property="Verb2TextField" destination="DY4-Rv-wAD" id="oOf-Tu-qjR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LBv-j2-Xkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
