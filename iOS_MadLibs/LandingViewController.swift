@@ -10,6 +10,7 @@ import UIKit
 
 class LandingViewController: UIViewController {
     @IBAction func AddWordsButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "AddWordsSegue", sender: self)
     }
 
     @IBOutlet weak var storyLabel: UILabel!
@@ -24,6 +25,8 @@ class LandingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 }
 
