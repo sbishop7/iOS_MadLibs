@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LandingViewController: UIViewController {
+class LandingViewController: UIViewController, AddWordsDelegate {
     @IBAction func AddWordsButtonPressed(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "AddWordsSegue", sender: self)
     }
@@ -26,6 +26,16 @@ class LandingViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! AddWordsViewController
+        controller.delegate = self as AddWordsDelegate
+        
+    }
+    
+    func getWords(data: [String]) {
+        print(data)
+        dismiss(animated: true, completion: nil)
+        
+        storyLabel.text = "We are having a perfectly \(data[0]) time now.  Later we will \(data[1]) and \(data[2]) in the \(data[3])."
         
     }
 }

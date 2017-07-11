@@ -15,7 +15,11 @@ class AddWordsViewController: UIViewController {
     @IBOutlet weak var Verb2TextField: UITextField!
     @IBOutlet weak var NounTextField: UITextField!
     
+    weak var delegate: AddWordsDelegate?
+    
+    
     @IBAction func SubmitButtonPressed(_ sender: UIButton) {
+        delegate?.getWords(data: [AdjectiveTextField.text!, Verb1TextField.text!, Verb2TextField.text!, NounTextField.text!])
     }
     
     
@@ -28,6 +32,8 @@ class AddWordsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     
     
 }
