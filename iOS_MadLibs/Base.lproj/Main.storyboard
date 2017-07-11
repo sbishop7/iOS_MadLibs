@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_MadLibs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LandingViewController" customModule="iOS_MadLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,17 +42,17 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="G26-9r-sBA"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="yhy-U7-TZP" kind="presentation" id="NUX-BO-rYo"/>
+                        <segue destination="yhy-U7-TZP" kind="presentation" identifier="AddWordsSegue" id="NUX-BO-rYo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1070" y="-544"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Words View Controller-->
         <scene sceneID="lf3-UC-thV">
             <objects>
-                <viewController id="yhy-U7-TZP" sceneMemberID="viewController">
+                <viewController id="yhy-U7-TZP" customClass="AddWordsViewController" customModule="iOS_MadLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xwE-wm-oD9"/>
                         <viewControllerLayoutGuide type="bottom" id="ghv-7k-Rmp"/>
